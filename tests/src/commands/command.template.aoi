@@ -1,0 +1,13 @@
+
+## Commands
+
+[ export: default ] {
+    name: 'ping'
+    code: {
+        $let[i;1]
+        $log[$get[i]]
+
+    }
+}
+    
+    

@@ -1,0 +1,117 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Aoi.js",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#numbers"
+		},
+		{
+			"include": "#operators"
+		},
+		{
+			"include": "#functions"
+		},
+		{
+			"include": "#aoifunctions"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [
+				{
+					"name": "aoi.keyword.data.types",
+					"match": "\\b(auto|string|const|int|ll)\\b"
+				},
+				{
+					"name": "aoi.keyword.half",
+					"match": "\\b(if|while|if|return|as|default|afn|fn)\\b"
+				},
+				{
+					"name": "aoi.support.function",
+					"match": "(\\.*)([a-zA-Z_]\\w*)\\("
+				},
+				{
+					"name": "keyword.operator.new",
+					"match": "\\b(new)\\b"
+				},
+				{
+					"name": "aoi.keyword.special",
+					"match": "\\b(include|export)\\b"
+				},
+				{
+					"name": "aoi.support.function",
+					"match": "((?:auto|string|const|int|ll)(.*)(?:=))"
+				},
+				{
+					"name": "keyword.other.unit",
+					"match": "\\b(true|false)\\b"
+				},
+				{
+					"name": "aoi.property.name",
+					"match": "^\\s*[a-zA-Z0-9_-]+(\\\\.[a-zA-Z0-9_-]+)*\\s*:"
+				},
+				{
+					"name": "markup.italic",
+					"match": "\\.[a-zA-Z_$][a-zA-Z0-9_$]*"
+				}
+			]
+		},
+		"strings": {
+			"name": "aoi.string",
+			"begin": "'",
+			"end": "'",
+			"patterns": [
+				{
+					"name": "constant.character.escape.aoi",
+					"match": "\\\\."
+				}
+			]
+		},
+		"comments": {
+			"name": "aoi.comment",
+			"begin": "##",
+			"end": "\n",
+			"patterns": [
+				{
+					"name": "aoi.comment.escape",
+					"match": "\\\\."
+				}
+			]
+		},
+		"numbers": {
+			"name": "aoi.number",
+			"match": "\\b\\d+\\b"
+		},
+		"operators": {
+			"name": "aoi.operator",
+			"match": "\\+|\\-|\\*|\\/|\\=|\\>|\\<|\\&|\\|\\-\\>"
+		},
+		"aoifunctions": {
+			"name": "aoi.function.function",
+			"patterns": [
+				{
+					"name": "aoi.function.function",
+					"match": "(?i)(\\$log)"
+				},
+				{
+					"name":"aoi.function.setter",
+					"match": "(?i)(\\$let)"
+				},
+				{
+					"name":"aoi.function.getter",
+					"match": "(?i)(\\$get)"
+				}
+			]
+		}
+	},
+	"scopeName": "source.aoi"
+}

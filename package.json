@@ -1,0 +1,102 @@
+{
+    "name": "aoijs",
+    "displayName": "AoiJs ",
+    "description": "A extension for Aoi.js",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.75.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "onCommand:aoijs-file-icon-theme.helloWorld"
+    ],
+    "main": "./dist/extension.js",
+    "contributes": {
+        "commands": [
+            {
+                "command": "aoijs-file-icon-theme.helloWorld",
+                "title": "Hello World"
+            }
+        ],
+        "languages": [
+            {
+                "id": "aoi",
+                "aliases": [
+                    "Aoi.js",
+                    "aoi"
+                ],
+                "extensions": [
+                    ".aoi"
+                ],
+                "configuration": "./language-configuration.json",
+                "icon": {
+                    "dark": "./icons/my-icon.svg",
+                    "light": "./icons/my-icon.svg"
+                }
+            }
+        ],
+        "grammars": [
+            {
+                "language": "aoi",
+                "scopeName": "source.aoi",
+                "path": "./syntaxes/aoi.tmLanguage.json"
+            }
+        ],
+        "themes": [
+            {
+                "label": "AoiJS",
+                "uiTheme": "vs-dark",
+                "path": "./themes/AoiJS-color-theme.json"
+            }
+        ],
+        "colors": [
+            {
+                "id": "aoi.function.keyword",
+                "description": "AoiJS Function Keyword",
+                "defaults": {
+                    "dark": "#8700ff",
+                    "light": "#260047",
+                    "highContrast": "#8700ff"
+                }
+            },
+            {
+                "id": "aoi.comment",
+                "description": "AoiJS Comment",
+                "defaults": {
+                    "dark": "#363636",
+                    "light": "#000000",
+                    "highContrast": "#1b1b1b"
+                }
+            }
+        ]
+    },
+    "scripts": {
+        "vscode:prepublish": "npm run package",
+        "compile": "webpack",
+        "watch": "webpack --watch",
+        "package": "webpack --mode production --devtool hidden-source-map",
+        "compile-tests": "tsc -p . --outDir out",
+        "watch-tests": "tsc -p . -w --outDir out",
+        "pretest": "npm run compile-tests && npm run compile && npm run lint",
+        "lint": "eslint src --ext ts",
+        "test": "node ./out/test/runTest.js"
+    },
+    "devDependencies": {
+        "@types/vscode": "^1.75.0",
+        "@types/glob": "^7.2.0",
+        "@types/mocha": "^9.1.0",
+        "@types/node": "14.x",
+        "@typescript-eslint/eslint-plugin": "^5.16.0",
+        "@typescript-eslint/parser": "^5.16.0",
+        "eslint": "^8.11.0",
+        "glob": "^7.2.0",
+        "mocha": "^9.2.2",
+        "typescript": "^4.5.5",
+        "ts-loader": "^9.2.8",
+        "webpack": "^5.70.0",
+        "webpack-cli": "^4.9.2",
+        "@vscode/test-electron": "^2.1.3"
+    }
+}
