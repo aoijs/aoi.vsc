@@ -3,6 +3,9 @@
 	"name": "Aoi.js",
 	"patterns": [
 		{
+			"include": "js.js"
+		},
+		{
 			"include": "#keywords"
 		},
 		{
@@ -22,6 +25,9 @@
 		},
 		{
 			"include": "#aoifunctions"
+		},
+		{
+			"include": "#commandtypes"
 		}
 	],
 	"repository": {
@@ -41,11 +47,11 @@
 				},
 				{
 					"name": "keyword.operator.new",
-					"match": "\\b(new)\\b"
+					"match": "\\b(qqq)\\b"
 				},
 				{
 					"name": "aoi.keyword.special",
-					"match": "\\b(include|export)\\b"
+					"match": "\\b(include|export|exportCommand)\\b"
 				},
 				{
 					"name": "aoi.support.function",
@@ -100,17 +106,25 @@
 			"patterns": [
 				{
 					"name": "aoi.function.function",
-					"match": "(?i)(\\$log)"
+					"match": "(?i)(\\$eval|\\$toString|\\$log|\\$jseval|\\$inc|\\$deleteObjectProperty|\\$cpu|\\$break|\\$addObjectProperty)"
 				},
 				{
 					"name":"aoi.function.setter",
-					"match": "(?i)(\\$let)"
+					"match": "(?i)(\\$let|\\$createObject|\\$cloneObject)"
 				},
 				{
 					"name":"aoi.function.getter",
-					"match": "(?i)(\\$get)"
+					"match": "(?i)(\\$username|\\$userTag|\\$userId|\\$userAvatar|\\$ping|\\$message|\\$guildName|\\$guildId|\\$clientToken|\\$clientTag|\\$clientId|\\$clientAvatar|\\$authorTag|\\$authorName|\\$authorId|\\$authorAvatar|\\$sum|\\$sub|\\$root|\\$ram|\\$pow|\\$passData|\\$or|\\$objectExists|\\$multi|\\$modulo|\\$math|\\$includes|\\$getObjectValues|\\$getObjectProperty|\\$getObjectKeys|\\$getObject|\\$get|\\$env|\\$divide|\\$checkCondition|\\$and|\\$abs)"
+				},
+				{
+					"name": "aoi.function.scope",
+					"match": "(?i)(\\$while|\\$try|\\$switch|\\$onlyIf|\\$loop|\\$if|\\$forIn|\\$finally|\\$elseIf|\\$else|\\$default|\\$comment|\\$catch|\\$case)"	
 				}
 			]
+		},
+		"commandtypes": {
+			"name": "aoi.command.type",
+			"match": "\\b(basic|interaction|awaited|ready)\\b"
 		}
 	},
 	"scopeName": "source.aoi"

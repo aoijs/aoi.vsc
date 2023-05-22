@@ -1,5 +1,3 @@
-
-        
 auto { Events, Intents } = [ include: 'aoi.js' ] as const
 auto { process } = [ include: 'process'] as const
 ## Configuring the bot

@@ -1,13 +1,13 @@
 
 ## Commands
 
-[ export: default ] {
-    name: 'ping'
-    code: {
-        $let[i;1]
+[exportCommand: basic] {
+    name: aoitest
+    code: @{ 
+        $let[i;0]
+        $if[$get[i] < 10 ;$let[i;11]]
+        $else[
+            $let[i;1]]
         $log[$get[i]]
-
     }
 }
-    
-    

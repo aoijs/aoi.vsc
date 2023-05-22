@@ -406,7 +406,7 @@
             "name": "Aoi Function Function",
             "scope": "aoi.function.function",
             "settings": {
-                "foreground": "#3abe52",
+                "foreground": "#71a7ff",
                 "fontStyle": "bold"
             }
         },
@@ -414,7 +414,7 @@
             "name": "Aoi Function Getter",
             "scope": "aoi.function.getter",
             "settings": {
-                "foreground": "#3bb3fd",
+                "foreground": "#ff65a8",
                 "fontStyle": "bold italic"
             }
         },
@@ -422,9 +422,26 @@
             "name": "Aoi Function Setter",
             "scope": "aoi.function.setter",
             "settings": {
-                "foreground": "#f06363",
+                "foreground": "#ff65a8",
                 "fontStyle": "bold"
             }
+        },
+        {
+            "name": "Aoi Function Scope",
+            "scope": "aoi.function.scope",
+            "settings": {
+                "foreground": "#06D6A0",
+                "fontStyle": "bold"
+            }
+        },
+        {
+            "name" : "Aoi Command Type",
+            "scope": "aoi.command.type",
+            "settings": {
+                "foreground": "#b27bff",
+                "fontStyle": "italic bold"
+            }
+            
         }
     ],
     "colors": {
