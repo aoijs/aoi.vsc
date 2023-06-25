@@ -1,5 +1,5 @@
 node_modules
 /a.js
-.idea
 .vscode-test
 out
+.DS_Store

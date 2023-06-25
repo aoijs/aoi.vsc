@@ -2,14 +2,19 @@
     "name": "aoijs",
     "displayName": "aoijs",
     "description": "A extension for Aoi.js",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "publisher": "akaruidevelopment",
     "engines": {
         "vscode": "^1.75.0"
     },
     "categories": [
-        "Other"
+        "Other",
+        "Snippets"
     ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/AkaruiDevelopment/aoi-vsc.git"
+      },
     "main": "./dist/extension.js",
     "contributes": {
         "commands": [
@@ -38,8 +43,8 @@
                 ],
                 "configuration": "./language-configuration.json",
                 "icon": {
-                    "dark": "./icons/my-icon.svg",
-                    "light": "./icons/my-icon.svg"
+                    "dark": "icons/aoi-bird.png",
+                    "light": "icons/aoi-bird.png"
                 }
             }
         ],
